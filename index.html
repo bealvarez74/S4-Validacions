@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+	<!--fontawasome-->
+    <link rel="stylesheet" href="css/all.css">
+    
+	<!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>S4 Validacions</title>
+
+</head>
+<body>
+<div class="container">
+	<!--HEADER-->
+	<header>		
+		<!--form search-->
+		<div class="row py-1 justify-content-end ">
+			<form action="#" class="needs-validation" id="myFormSearch" onsubmit="return validateSearch()">
+				<div class="form-row justify-content-end">
+					<div class="input-group col-md">
+						<input type="text" class="form-control" id="inputSearch" placeholder="cerca" name="search">
+					<div class="input-group-append">
+						<button class="btn btn-dark" type="submit"><i class="fas fa-search text-light"></i></button>    
+					</div>
+					<div class="invalid-feedback" id="errorSearch"></div>
+					</div>
+				</div>
+			</form>
+		</div> 
+		<!--Menú de navegación--> 
+		<div class="row my-2">
+			<div class="col-sm mb-3">
+				<nav class="navbar navbar-expand-md navbar-light">
+					<a class="navbar-brand" href="#"><img src="images/bebadmyweb.png" alt ="logo"></a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+					<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+					<ul class="navbar-nav mx-5">
+						<li class="nav-item">
+						<a class="nav-link" href="#">Projectes</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link" href="#">Sobre mi</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contacte</a>
+						</li>    
+					</ul>					
+					</div>
+				</nav>			
+			</div>
+		</div>   
+  	</header>
+	<!--section LOGIN-->
+	<section class="row">
+	<div class="col-md-6 px-5">
+  	<h2 class="my-5">Login</h2>
+  	<form action="#" class="needs-validation" id="myFormLogin" onsubmit="return validateLogin()">
+		<div class="form-group col px-0">
+			<label for="inputEmail">Email</label>
+			<input type="text" name="inputEmail" class="form-control" id="inputEmail">
+			<div class="invalid-feedback" id="errorEmail"></div>
+		</div>
+		<div class="form-group col px-0">
+			<label for="inputPassword">Contrasenya</label>
+			<input type="password" name="inputPassword"  class="form-control" id="inputPassword">
+			<div class="invalid-feedback" id="errorPassword"></div>
+		</div>	
+	    <button type="submit" class="btn btn-dark my-2">Login</button>
+  	</form>
+    </div>
+
+   <!--section REGISTRE--> 
+	<div class="col-md-6 px-5">
+		<h2 class="my-5">Registre</h2>
+  	<form action="#" class="needs-validation" id="myFormRegistre" onsubmit="return validateRegistre()">	
+		<div class="form-group col px-0">
+			<label for="inputEmailRegistre">Email</label>
+			<input type="text" name="inputEmailRegistre" class="form-control" id="inputEmailRegistre">
+			<div class="invalid-feedback" id="errorEmailRegistre"></div>
+		</div>
+		<div class="form-group col px-0">
+			<label for="inputPasswordRegistre">Contrasenya</label>
+			<input type="password" name="inputPasswordRegistre"  class="form-control" id="inputPasswordRegistre">
+			<div class="invalid-feedback" id="errorPasswordRegistre"></div>
+		</div>
+		<div class="form-group col px-0">
+			<label for="inputPasswordRegistreRepeat">Torna a escriure Contrasenya</label>
+			<input type="password" name="inputPasswordRegistreRepeat"  class="form-control" id="inputPasswordRegistreRepeat">
+			<div class="invalid-feedback" id="errorPasswordRegistreRepeat"></div>
+		</div>
+		<div class="form-group col px-0">
+			<label for="inputCity">Ciutat</label>
+			<select id="inputCity" class="form-control">
+				<option selected value=""></option>
+				<option>Sabadell</option>
+				<option>Terrassa</option>
+				<option>Barberà del Vallés</option>
+				<option>Cerdanyola</option>
+				<option>Badia del Vallés</option>
+				</select>
+			<div class="invalid-feedback" id="errorCity"></div>
+		</div>					
+		<button type="submit" class="btn btn-dark my-2">Registre</button>
+  	</form>
+   </div>
+   </section>
+   <!--FOOTER-->
+	<footer class="bg-dark text-center">
+		<div class="row">
+			<div class="col-sm m-2" >
+			  <a class="p-2" href="#"><i class="fab fa-facebook-f text-light"></i></a>
+			  <a class="p-2" href="#"><i class="fab fa-twitter text-light"></i></a>
+			  <a class="p-2" href="#"><i class="fab fa-instagram text-light"></i></a>
+			</div>
+		</div>         
+	</footer>  
+</div>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="validate.js"></script>
+
+</body>
+</html>
